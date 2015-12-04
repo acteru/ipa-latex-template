@@ -8,5 +8,5 @@ dnf install texstudio texlive-comment.noarch texlive-bable-german.noarch
 ```
 
 #### Managementmethod
-The used managementmehtod is Hermes it is used by the swiss goverment for IT-Projects.
+The used management method is Hermes it is used by the swiss goverment for IT-Projects.
 [Hermes](http://www.hermes.admin.ch/)
