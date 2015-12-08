@@ -1,102 +1,10 @@
 % IPA Dokumentation - Template
-% Hauptdatei - Main mit Paketen
 
-\documentclass[a4paper,11pt,oneside]{report} % Lege Grundeigenschaften des Dokuments fest
-
-
-% PACKAGES
-\usepackage[utf8]{inputenc} % Ermöglicht Umlaute usw...
-\usepackage[ngerman]{babel} % Deutsch-Support
-\usepackage{makeidx} % Benötigt man für das Inhaltsverzeichnis
-\usepackage{hyperref} % Ermöglicht Hyperlinks
-\usepackage{tabularx} % Wird benötig um Tabellen zu erstellen
-\usepackage{graphicx} % Ermöglicht das einfügen von Bildern
-\usepackage{geometry} % Dient zur Interface dimensionierung
-\usepackage{pdflscape} % bessere Lesbarkeit des PDF Dokuments
-\usepackage{pdfpages} % ermöglicht das importieren von PDF-Dateien
-\usepackage{fancyhdr} % Ein schöner Header ist verfügbar
-\usepackage{comment} % Mehrlinien-Kommentar werden möglich
-\usepackage{listings} % Auflistung für Codeblocks
-\usepackage{color} % Dient dem Syntaxhighlighting für Codeblocks
-%\usepackage[usenames,dvipsnames]{xcolor} % spezial Farben
-%\usepackage{menukeys}
-
-
-% CAPTIONS
-\usepackage{caption} % Ermöglicht einen schönen Header beim Code
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-
-
-% HYPERLINKS
-\hypersetup{%
-  colorlinks=false,% hyperlinks will be black
-  pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
-}
-
-
-% FARBEN
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
-\definecolor{mymauve}{rgb}{0.58,0,0.82}
-
-
-% CODE LISTING
-%\lstloadlanguages{Bash} %
-\lstset{ %
-  backgroundcolor=\color{white},
-  basicstyle=\footnotesize,
-  %basicstyle=\ttfamily\color{white} % Farbe des Code %
-  breakatwhitespace=false,
-  breaklines=true,
-  captionpos=t,
-  commentstyle=\color{mygreen},
-  deletekeywords={...},
-  escapeinside={\%*}{*)},
-  extendedchars=true,
-   %frame=single, %
-  keepspaces=true,
-  keywordstyle=\color{blue},
- % language=Bash, %
-  morekeywords={*,...},
- % numbers=left, %
- % numbersep=5pt, %
- % numberstyle=\tiny\color{mygray}, %
-  rulecolor=\color{mygray},
-  showspaces=false,
-  showstringspaces=false,
-  showtabs=false,
-  stepnumber=1,
- % stringstyle=\color{red}, %
-  stringstyle=\color{mymauve},
-  tabsize=2,
-  title=\lstname
-}
-\lstset{literate=%
-{Ö}{{\"O}}1
-{Ä}{{\"A}}1
-{Ü}{{\"U}}1
-{ß}{{\ss}}2
-{ü}{{\"u}}1
-{ä}{{\"a}}1
-{ö}{{\"o}}1
-}
-
-% TABELLEN
-\newcolumntype{b}{X} % Definition of columntypes for nice tables
-\newcolumntype{s}{>{\hsize=.25\hsize}X}
-%\newcommand{\heading}[1]{\multicolumn{1}{c}{#1}}
-
-% HEADER
-\setlength{\headheight}{13.6pt} % Höhe des Headers
-\pagestyle{fancyplain}
-\fancyhead[L]{Max Muster} % Linke Seite
-\fancyhead[C]{\today} % Mitte
-\fancyhead[R]{Company} % Rechts
-
+\input{config.tex}
 
 \begin{document}
+
+% TITELSEITE
 \begin{titlepage}
 \begin{center}
 \textsc{}\\[3cm]
@@ -106,32 +14,29 @@
 \begin{minipage}{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-Max Muster
+\ipaAuthor{}
 \end{flushleft}
 \end{minipage}%
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Fachvorgesetzter:} \\
-Erika Mustermann
+\ipaFachvorgesetzter{}
 \end{flushright}
 \end{minipage}
-\vfill
-% Bottom of the page
+\vfill % Vertikaler Platz auffüllen
 {\large \today}
 \end{center}
 \end{titlepage}
-\section{Dokumentinformationen}
-\nopagebreak
+
 \input{preface/dokumentinformationen}
 \pagebreak
 \tableofcontents
 \lstlistoflistings
 \listoffigures
 \listoftables
-\part{Ablauf und Umfeld}
+
 \input{part1}
-\part{Projektdokumentation}
 \input{part2}
-\part{Anhang}
 \input{part3}
+
 \end{document}
