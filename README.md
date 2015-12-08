@@ -3,8 +3,8 @@ I created this template for my thesis as an information scientist
 
 ## Requirements
 You can use either of the following methods depending on what you would like to use as your IDE:
-1. Use Texstudio, it installs the needed packages.
-2. Install texlive, texlive-latex-extra and build with latexmk
+ 1. Use Texstudio, it installs the needed packages.
+ 2. Install texlive, texlive-latex-extra and build with latexmk
 
 Don't forget to install texlive-lang-german.
 
