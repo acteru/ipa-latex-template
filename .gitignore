@@ -1,0 +1,12 @@
+build
+*.aux
+*.log
+*.lot
+*.toc
+*.out
+*.lof
+*.lol
+*.synctex.gz
+*.pdf
+!main.pdf
+

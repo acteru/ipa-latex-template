@@ -1,117 +1,44 @@
 % IPA Dokumentation - Template
-% Haupdatei - Main mit Paketen
-\documentclass[a4paper,11pt,oneside]{report} % Dokumentklasse lege Grundeigenschaften des Dokuments fest
-\usepackage[utf8]{inputenc} % Ermöglicht Umlaute usw...
-\usepackage[ngerman]{babel} % Deutsch-Support
-\usepackage{makeidx} % Benötigt man für das Inhaltsverzeichnis
-\usepackage{hyperref} % Ermöglicht Hyperlinks
-\usepackage{tabularx} % Wird benötig um Tabellen zu erstellen
-\usepackage{graphicx} % Ermöglicht das einfügen von Bildern
-\usepackage{geometry} % Dient zur Interface dimensionierung
-\usepackage{pdflscape} % bessere lesbarkeit des Pdfdokuments
-\usepackage{pdfpages} % ermöglicht das importieren von pdf-dateien
-\usepackage{fancyhdr} % Ein schöner header ist verfügbar
-%\usepackage[usenames,dvipsnames]{xcolor} % spezial Farben %
-\usepackage{comment} % Mehrlinien-Kommentar werden möglich
-\setlength{\headheight}{15.2pt}
-\usepackage{caption} % Ermöglich einen schönen Capton-Header beim Code
-\DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
-\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
-\usepackage{listings} % Auflistung für Codeblocks
-\usepackage{color} % Dient dem Syntaxhighlighting für Codeblocks 
-%\usepackage{menukeys}
-\hypersetup{%
-  colorlinks=false,% hyperlinks will be black
-  pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
-}
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
-\definecolor{mymauve}{rgb}{0.58,0,0.82}
-%\lstloadlanguages{Bash} %
-\lstset{ %
-  backgroundcolor=\color{white},
-  basicstyle=\footnotesize,
-  %basicstyle=\ttfamily\color{white} % Farbe des Code %
-  breakatwhitespace=false,
-  breaklines=true,
-  captionpos=t,
-  commentstyle=\color{mygreen},
-  deletekeywords={...},
-  escapeinside={\%*}{*)},
-  extendedchars=true,
-   %frame=single, %
-  keepspaces=true,
-  keywordstyle=\color{blue},
- % language=Bash, %
-  morekeywords={*,...},           
- % numbers=left, %
- % numbersep=5pt, %
- % numberstyle=\tiny\color{mygray}, %
-  rulecolor=\color{mygray},
-  showspaces=false,
-  showstringspaces=false,
-  showtabs=false,
-  stepnumber=1,
- % stringstyle=\color{red}, %
-  stringstyle=\color{mymauve},
-  tabsize=2,
-  title=\lstname
-}
-\lstset{literate=%
-{Ö}{{\"O}}1
-{Ä}{{\"A}}1
-{Ü}{{\"U}}1
-{ß}{{\ss}}2
-{ü}{{\"u}}1
-{ä}{{\"a}}1
-{ö}{{\"o}}1
-}
-% Definition of columtypes for nice tables
-\newcolumntype{b}{X}
-\newcolumntype{s}{>{\hsize=.25\hsize}X}
-%\newcommand{\heading}[1]{\multicolumn{1}{c}{#1}}
-\setlength{\headheight}{13.6pt}
-\pagestyle{fancyplain}
-\fancyhead[L]{Max Muster}
-\fancyhead[C]{\today}
-\fancyhead[R]{Company}
+
+\documentclass[a4paper,11pt,oneside]{report} % Lege Grundeigenschaften des Dokuments fest
+
+\input{config.tex}
+
 \begin{document}
+
+% TITELSEITE
 \begin{titlepage}
-\begin{center}
-\textsc{}\\[3cm]
-\textsc{\LARGE placeholder}\\[1.5cm]
-\textsc{\LARGE placeholder}\\[1.5cm]
-\noindent
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Author:}\\
-Max Muster
-\end{flushleft}
-\end{minipage}%
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Fachvorgesetzter:} \\
-Erika Mustermann
-\end{flushright}
-\end{minipage}
-\vfill
-% Bottom of the page
-{\large \today}
-\end{center}
+    \begin{center}
+        \textsc{}\\[3cm]
+        \textsc{\LARGE placeholder}\\[1.5cm]
+        \textsc{\LARGE placeholder}\\[1.5cm]
+        \noindent
+        \begin{minipage}{0.4\textwidth}
+            \begin{flushleft} \large
+                \emph{Author:}\\
+                \ipaAuthor{}
+            \end{flushleft}
+        \end{minipage}%
+        \begin{minipage}{0.4\textwidth}
+            \begin{flushright} \large
+                \emph{Fachvorgesetzter:} \\
+                \ipaFachvorgesetzter{}
+            \end{flushright}
+        \end{minipage}
+        \vfill % Vertikaler Platz auffüllen
+        {\large \today}
+    \end{center}
 \end{titlepage}
-\section{Dokumentinformationen}
-\nopagebreak
+
 \input{preface/dokumentinformationen}
 \pagebreak
 \tableofcontents
 \lstlistoflistings
 \listoffigures
 \listoftables
-\part{Ablauf und Umfeld}
+
 \input{part1}
-\part{Projektdokumentation}
 \input{part2}
-\part{Anhang}
 \input{part3}
+
 \end{document}
