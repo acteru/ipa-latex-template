@@ -1,5 +1,6 @@
 # IPA-latex-template
 I created this template for my thesis as an information scientist
+
 IPA = Individuelle Produktiv-Arbeit
 
 ## Requirements
@@ -16,7 +17,9 @@ dnf install texstudio texlive-comment.noarch texlive-bable-german.noarch
 apt-get install texstudio texlive-latex-extra texlive-lang-german
 ```
 ### Installation on Windows 7 64bit
-I recommend to install: MikTeX and the Texstudio(needs MikTex or TexLive) installation on Windows
+[MikTeX](http://http://miktex.org/download)
+[Texstudio](http://texstudio.org)
+I recommend to install: MikTeX and the Texstudio(needs MikTex or TexLive) when you try to compile it for the first time it will suggest the missing packages and you simply have to click install.
 
 ## Management Method
 The recommended management method for the swiss IPA is [Hermes](http://www.hermes.admin.ch/). It is often used by the swiss government for IT-Projects.
