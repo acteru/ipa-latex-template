@@ -20,6 +20,10 @@ apt-get install texstudio texlive-latex-extra texlive-lang-german
 [Texstudio](http://texstudio.org)
 I recommend to install: MikTeX and the Texstudio(needs MikTex or TexLive) when you try to compile it for the first time it will suggest the missing packages and you simply have to click install.
 
+### Installation on Mac - El Capitan
+[MacTEX 2015](https://tug.org/mactex/mactex-download.html)
+[Texstudio](http://www.texstudio.org/)
+
 ## Latex
 
 ### Debugging
