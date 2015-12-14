@@ -3,6 +3,8 @@
 \newcommand{\ipaFachvorgesetzter}{Erika Mustermann}
 \newcommand{\ipaFirma}{Company}
 
+% FASTER COMPILES
+%\includeonly{part1}
 
 % PACKAGES
 \usepackage[utf8]{inputenc} % Ermöglicht Umlaute usw...
@@ -31,7 +33,7 @@
 % CAPTIONS
 \usepackage{caption} % Ermöglicht einen schönen Header beim Code
 \DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth-6pt}{#1#2#3}}}
 \captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
 
 
@@ -45,7 +47,7 @@
 % CODE LISTING
 %\lstloadlanguages{Bash} %
 \lstset{ %
-    backgroundcolor=\color{white},
+    %backgroundcolor=\color{white},
     basicstyle=\footnotesize,
     %basicstyle=\ttfamily\color{white} % Farbe des Code %
     breakatwhitespace=false,
@@ -83,14 +85,12 @@
     {ö}{{\"o}}1
 }
 
-% TABELLEN
-\newcolumntype{b}{X} % Definition of columntypes for nice tables
-\newcolumntype{s}{>{\hsize=.25\hsize}X}
-%\newcommand{\heading}[1]{\multicolumn{1}{c}{#1}}
-
 % HEADER
 \setlength{\headheight}{13.6pt} % Höhe des Headers
 \pagestyle{fancyplain}
 \fancyhead[L]{\ipaAuthor} % Linke Seite
 \fancyhead[C]{\today} % Mitte
 \fancyhead[R]{\ipaFirma} % Rechts
+
+% FOOTER
+\addtolength{\textheight}{2cm}
