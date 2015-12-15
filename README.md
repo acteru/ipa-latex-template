@@ -6,6 +6,7 @@ IPA = Individuelle Produktiv-Arbeit
 You can use either of the following methods depending on what you would like to use as your IDE:
  1. Use Texstudio, it installs the needed packages.
  2. Install texlive, texlive-latex-extra and build with latexmk
+ 3. Use Docker
 
 ### Packages for Fedora 23 64bit
 ```
@@ -23,6 +24,11 @@ I recommend to install: MikTeX and the Texstudio(needs MikTex or TexLive) when y
 ### Installation on Mac - El Capitan
 [MacTEX 2015](https://tug.org/mactex/mactex-download.html)
 [Texstudio](http://www.texstudio.org/)
+
+### Docker
+ 1. Install Docker
+ 2. Run `make build`
+ 3. Run `make` to build the pdf
 
 ## Latex
 
