@@ -20,6 +20,7 @@
 \usepackage{comment} % Mehrlinien-Kommentar werden möglich
 \usepackage{listings} % Auflistung für Codeblocks
 \usepackage{color} % Dient dem Syntaxhighlighting für Codeblocks
+\usepackage{minted} % Syntax highlighting für Code
 %\usepackage[usenames,dvipsnames]{xcolor} % spezial Farben
 %\usepackage{menukeys}
 
@@ -43,47 +44,6 @@
     pdfborderstyle={/S/U/W 0}% border style will be underline of width 1pt
 }
 
-
-% CODE LISTING
-%\lstloadlanguages{Bash} %
-\lstset{ %
-    %backgroundcolor=\color{white},
-    basicstyle=\footnotesize,
-    %basicstyle=\ttfamily\color{white} % Farbe des Code %
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=t,
-    commentstyle=\color{mygreen},
-    deletekeywords={...},
-    escapeinside={\%*}{*)},
-    extendedchars=true,
-    %frame=single, %
-    keepspaces=true,
-    keywordstyle=\color{blue},
-    % language=Bash, %
-    morekeywords={*,...},
-    % numbers=left, %
-    % numbersep=5pt, %
-    % numberstyle=\tiny\color{mygray}, %
-    rulecolor=\color{mygray},
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    stepnumber=1,
-    % stringstyle=\color{red}, %
-    stringstyle=\color{mymauve},
-    tabsize=2,
-    title=\lstname
-}
-\lstset{literate=%
-    {Ö}{{\"O}}1
-    {Ä}{{\"A}}1
-    {Ü}{{\"U}}1
-    {ß}{{\ss}}2
-    {ü}{{\"u}}1
-    {ä}{{\"a}}1
-    {ö}{{\"o}}1
-}
 
 % HEADER
 \setlength{\headheight}{13.6pt} % Höhe des Headers
