@@ -1,5 +1,5 @@
 # IPA-latex-template
-I created this template for my thesis as an information scientist at GIBB
+I created this template for my thesis as an information scientist at GIBB<br>
 IPA = Individuelle Produktiv-Arbeit
 
 ## Requirements
@@ -29,7 +29,7 @@ apt-get install texstudio texlive-latex-extra texlive-lang-german
 I recommend [MikTeX](http://miktex.org/download) and [Texstudio](http://texstudio.org) (requires MikTex or TexLive). The missing packages will be installed on first build.
 
 #### Mac - El Capitan
-[MacTEX 2015](https://tug.org/mactex/mactex-download.html)
+[MacTEX 2015](https://tug.org/mactex/mactex-download.html)<br>
 [Texstudio](http://www.texstudio.org/)
 
 ## Management Method
