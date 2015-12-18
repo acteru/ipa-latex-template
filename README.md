@@ -1,5 +1,5 @@
 # IPA-latex-template
-I created this template for my thesis as an information scientist at GIBB  
+I created this template for my thesis as an information scientist at GIBB
 IPA = Individuelle Produktiv-Arbeit
 
 ## Requirements
@@ -11,7 +11,7 @@ You can use either of the following methods depending on what you would like to 
 ### Docker
 Docker installs the latest Texlive version and configures everything correctly:
  1. Install Docker
- 2. Run `make build` to build the docker image
+ 2. Run `make setup` to build the docker image
  3. Run `make` to build the pdf
 
 ### Texstudio
@@ -29,7 +29,7 @@ apt-get install texstudio texlive-latex-extra texlive-lang-german
 I recommend [MikTeX](http://miktex.org/download) and [Texstudio](http://texstudio.org) (requires MikTex or TexLive). The missing packages will be installed on first build.
 
 #### Mac - El Capitan
-[MacTEX 2015](https://tug.org/mactex/mactex-download.html)  
+[MacTEX 2015](https://tug.org/mactex/mactex-download.html)
 [Texstudio](http://www.texstudio.org/)
 
 ## Management Method

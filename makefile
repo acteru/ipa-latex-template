@@ -1,4 +1,4 @@
-.PHONY: run build
+.PHONY: run setup
 run: ; @docker run --rm -it -v $(shell pwd):/var/texlive latexrun
 
-build: ; docker build -t latexrun .
+setup: ; docker build -t latexrun .
