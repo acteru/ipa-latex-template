@@ -1,5 +1,5 @@
 # IPA-latex-template
-I created this template for my thesis as an information scientist at GIBB<br>
+I created this template for my thesis as an information scientist<br>
 IPA = Individuelle Produktiv-Arbeit
 
 ## Requirements
