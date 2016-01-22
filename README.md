@@ -1,6 +1,6 @@
 # IPA-latex-template
 I created this template for my thesis as an information scientist<br>
-IPA = Individuelle Produktiv-Arbeit
+IPA = Individuelle Praktische Arbeit
 
 ## Requirements
 You can use either of the following methods depending on what you would like to use as your IDE:
