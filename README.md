@@ -19,7 +19,11 @@ dnf install texstudio texlive-comment.noarch texlive-bable-german.noarch
 ```
 #### Ubuntu 14.04 LTS
 ```
-apt-get install texstudio texlive-latex-extra texlive-lang-german
+sudo apt-get install texstudio texlive-latex-extra texlive-lang-german
+```
+#### Ubuntu 16.04 LTS
+```
+sudo apt install texstudio texlive-latex-extra texlive-lang-german
 ```
 #### Windows 7
 I recommend [MikTeX](http://miktex.org/download) and [Texstudio](http://texstudio.org) (requires MikTex or TexLive). The missing packages will be installed on first build.
