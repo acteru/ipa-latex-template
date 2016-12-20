@@ -1,4 +1,114 @@
 \chapter{Zeitplan}
+
+% ALTERNATIVE: Zeitplan per PDF importieren
+
+\section{Erläuterung zum Zeitplan}
+Der Zeitplan auf der nächsten Seite ist in eine Blockgrösse von zwei Stunden aufgeteilt. Blöcke von nur einer Stunde werden durch gleichzeitiges Arbeiten an zwei 2-Stundenblöcken dargestellt.
+
+\newgeometry{bottom=2cm,top=2.5cm}
+
+\newcommand{\soll}[3]{\ganttbar{#1}{#2}{#3}}
+\newcommand{\ist}[2]{\ganttbar[bar top shift=-0.01,bar/.append style={bottom color=green}]{}{#1}{#2}}
+
 \begin{landscape} % querformat für diese Seite
-% hier Zeitplan per pdf importieren
+    \begin{ganttchart}[
+            title height=1,
+            y unit title=5mm,
+            y unit chart=4mm,
+            x unit=4.8mm,
+            hgrid={dotted, draw=none},
+            vgrid={draw=none, dotted, draw=none, black},
+            % BAR
+            bar label node/.append style={yshift=-1.3mm},
+            bar height=.7,
+            bar top shift=.3,
+            bar/.append style={top color=lightgray!50, bottom color=gray},
+            % MILESTONE
+            milestone/.append style={top color=white, bottom color=gray},
+            milestone height=0.4mm,
+            milestone inline label node/.style={below=2mm, font=\scriptsize},
+            milestone top shift=-0.15mm,
+            %bar label node/.style={text width=4cm,align=right,anchor=east},
+        ]{1}{40}
+        \pgfcalendar{titlecal}{2016-05-06}{2016-05-24}{
+            % Exclude weekends and mondays
+            \ifdate{weekend}{}{\ifdate{Monday}{}{
+                    \gantttitle{
+                        \pgfcalendarweekdayshortname{\pgfcalendarcurrentweekday}
+                        \pgfcalendarcurrentday.\pgfcalendarcurrentmonth
+                    }{4}
+                }
+            }
+        } \\
+        \gantttitlelist{1,...,10}{4} \\
+        \gantttitle{Initialisierung}{6}
+        \gantttitle{Konzept}{12}
+        \gantttitle{Realisierung}{16}
+        \gantttitle{Abschluss}{6} \\
+
+        %%%%%% EXPERTENBESUCHE
+        \soll{Expertenbesuche}{7}{7}
+        \soll{}{27}{27} \\
+        \ist{7}{7}
+        \ist{27}{27} \\
+        %%%%%% JOURNAL & DOKUMENTATION
+        \soll{Dokumentation / Journal}{2}{6}
+        \soll{}{8}{18}
+        \soll{}{23}{24}
+        \soll{}{28}{28}
+        \soll{}{32}{34}
+        \soll{}{36}{36} \\
+        \ist{2}{6}
+        \ist{8}{18}
+        \ist{20}{20}
+        \ist{23}{24}
+        \ist{28}{28}
+        \ist{32}{34}
+        \ist{36}{36}
+        \ganttmilestone[inline]{M1}{6}
+        \ganttmilestone[inline]{M2}{18} \\
+        %%%%%% DAY ONE 1-4
+        \soll{Zeitplan}{1}{1} \\
+        \ist{1}{1} \\
+        %%%%%% DAY TWO 5-8
+        %%%%%% DAY THREE 9-12
+        %%%%%% DAY FOUR 13-16
+        %%%%%% DAY FIVE 17-20
+        %%%%%% DAY SIX 21-24
+        \soll{Scripts schreiben}{19}{22} \\
+        \ist{19}{22} \\
+        %%%%%% DAY SEVEN 25-28
+        \soll{Product}{25}{26} \\
+        \ist{25}{26} \\
+        \soll{Product2}{27}{27} \\
+        \ist{27}{27} \\
+        %%%%%% DAY EIGHT 29-32
+        \soll{Product3}{29}{29} \\
+        \ist{29}{30} \\
+        \soll{Testing}{30}{31} \\
+        \ist{30}{31}
+        \ganttmilestone[inline, milestone top shift=-0.4mm]{M3}{34} \\
+        %%%%%% DAY NINE 33-36
+        \soll{Reserve}{35}{35} \\
+        \ist{35}{35} \\
+        %%%%%% DAY TEN 37-40
+        \soll{Abschluss}{37}{40} \\
+        \ist{37}{40}
+        \ganttmilestone[inline]{M4}{39}
+    \end{ganttchart}
+
+    {\addtolength{\leftskip}{5.1cm}
+    \textbf{Legende}\\
+    Grau: soll \\
+    Grün: ist
+
+    \textbf{Meilensteine}\\
+    M1: Initialisierung abgeschlossen\\
+    M2: Konzeptphase abgeschlossen\\
+    M3: Realisierung abgeschlossen\\
+    M4: Projekt abgeschlossen
+
+}
 \end{landscape}
+\restoregeometry
+
