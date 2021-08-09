@@ -1,8 +1,9 @@
 # IPA-latex-template
-I created this template for my thesis as an information scientist<br>
-IPA = Individuelle Praktische Arbeit
+This template was created as an alternativ to the supplied Word templates<br>
+IPA = Individuelle Praktische Arbeit (https://www.ict-berufsbildung.ch)
 
 ## Requirements
+
 ### Python pygments
 The [Minted](https://github.com/gpoore/minted) Latex package is used for syntax highlighting of code blocks and requires the python `pygments` package.
 ### Texlive 2015
